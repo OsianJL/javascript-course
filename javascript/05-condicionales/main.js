@@ -64,3 +64,51 @@ if (5 === '5') {
     
 }
 
+//*======================================*//
+
+//* usamos boolen para saber que es true y false. use node en la consola y luego Boolean(whatever)
+
+let isConnected1 = true; 
+let isConnected2= 25; 
+
+if (isConnected1 === true) {
+    console.log("ahora si me esta dando un true")
+} else {
+    console.log("el argumento es false")
+}
+
+if (isConnected2 === true) {
+    console.log("ahora si me esta dando un true")
+} else {
+    console.log("el argumento es false")
+}
+
+Boolean(0)
+
+
+//? Scope de variables: 
+
+function ejemploVarLet() {
+    if (true) {
+        var x = 10;
+        let y = 20;
+    }
+
+    console.log(x); // Funciona porque `x` es global en la función
+    // console.log(y); // Error: `y` no está definido
+}
+
+ejemploVarLet();
+
+
+//! Si dentro de un bloque creamos una variable que se llame igual que una global, 
+//! tiene preferencia la local.
+
+let children = 0; 
+const isPregnant = true; 
+
+if (isPregnant) {
+children++;
+}
+
+console.log(children);
