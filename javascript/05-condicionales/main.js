@@ -101,8 +101,6 @@ function ejemploVarLet() {
 ejemploVarLet();
 
 
-//! Si dentro de un bloque creamos una variable que se llame igual que una global, 
-//! tiene preferencia la local.
 
 let children = 0; 
 const isPregnant = true; 
@@ -112,3 +110,18 @@ children++;
 }
 
 console.log(children);
+
+
+//! Si dentro de un bloque creamos una variable que se llame igual que una global, 
+//! tiene preferencia la local.
+
+
+const friend = 'Carlos'
+
+if (true) {
+    let friend = 'Xavi';
+
+    friend = 'Ivan'
+}
+
+console.log(friend);
