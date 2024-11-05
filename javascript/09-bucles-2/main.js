@@ -80,6 +80,24 @@ while (true) {
 
 console.log('osian')
 
+//* ejemplo de un break tipico
+//*saber si un numero es primo
+
+const numeroUsuario = 50;
+let esPrimo = true; 
+
+for (let i = 2; i < numeroUsuario; i++){
+console.time()
+  if (numeroUsuario % i === 0) {
+    console.log('no es primo')
+    esPrimo = false
+    break //* si quito este break la funcion hará 50 iteraciones inutiles, ya que desde que no era primo una vez es suficiente
+  } 
+
+}
+console.time()
+
+console.log(esPrimo)
 
 
 
