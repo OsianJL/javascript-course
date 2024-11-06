@@ -1,0 +1,12 @@
+
+
+{
+"nombre": "osian",
+"edad":37,
+"isMarried": false,
+"amigos": ["osi", "pepe", "dolly"],
+"caracteristicas": {
+    "ojos": "azules",
+    "cabeza": "grande"
+}
+}
