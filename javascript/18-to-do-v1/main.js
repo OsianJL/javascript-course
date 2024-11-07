@@ -1,3 +1,6 @@
+import { leerTareas, crearTarea, borrarTarea, actualizarTarea, completarDescompletarTarea  } from "./funtions/todoFunctions.js";
+
+
 const tareas = [
     {
         id:1,
@@ -28,15 +31,15 @@ do {
 
 
 if (selection === 'r') {
-    leerTareas();
+    leerTareas(tareas);
 } else if (selection === 'c') {
-    crearTarea();
+    crearTarea(tareas);
 } else if (selection === 'u') {
-    actualizarTarea();
+    actualizarTarea(tareas);
 } else if (selection === 'd') {
-    borrarTarea();
+    borrarTarea(tareas);
 } else if (selection === 'e') {
-    completarDescompletarTarea();
+    completarDescompletarTarea(tareas);
 } else if (selection === 'x' || selection === null) {
     console.log('adios');
     break;
