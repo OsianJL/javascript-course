@@ -17,7 +17,7 @@ const ultimoLiLista2 = document.querySelector('.lista-2 li:last-child');
 console.log(ultimoLiLista2);
 
 
-//* Tambien podemos cazar variso elementos usando querySelectorAll
+//* Tambien podemos cazar varios elementos usando querySelectorAll
 
 const todosLosLiDeLaWeb = document.querySelectorAll('li')
 console.log(todosLosLiDeLaWeb);
