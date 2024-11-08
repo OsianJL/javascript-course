@@ -1,0 +1,12 @@
+
+.colorOnClick {
+    color: red;
+}
+
+.textSizeOnClick {
+    font-size: 50px
+}
+
+.borderOnClick {
+    border: 2px solid blue; 
+}
