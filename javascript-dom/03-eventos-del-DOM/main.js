@@ -75,7 +75,12 @@ const btn2 = document.querySelector('.btn-2')
 const btn3 = document.querySelector('.btn-3')
 const btn4 = document.querySelector('.btn-4')
 const btn5 = document.querySelector('.btn-5')
-
+const inputChange = document.querySelector('[placeholder="change"]')
+const inputKeyPress = document.querySelector('[placeholder="keypress"]')
+const inputRange = document.querySelector('[type="range"]')
+console.log(inputChange)
+console.log(inputKeyPress)
+console.log(inputRange)
 
 //* Click
 
@@ -112,3 +117,72 @@ btn4.addEventListener('mouseleave', () => {
 btn5.addEventListener('mousemove', () => {
    console.log('te estas moviendo por el boton')
 })
+
+//? Eventos de teclado
+
+// cuando has modificado el input Y SALES DEL INPUT
+inputChange.addEventListener('change', ()=> {
+    console.log('Has modificado el input');
+    
+})
+
+inputKeyPress.addEventListener('keypress', ()=> {
+    console.log('Has apretado una tecla cualquiera');
+    
+})
+
+
+//* scroll
+
+const parrafo = document.querySelector('.scroll')
+
+parrafo.addEventListener('scroll', ()=> {
+    console.log('SCROLL');
+    console.log(parrafo.scrollTop);
+    if (parrafo.scrollTop > 50) parrafo.style.borderColor = 'red'; 
+    
+})
+
+
+
+//* transitionend 
+
+const btnTransition = document.querySelector('.transicion')
+console.log(btnTransition);
+btnTransition.addEventListener('transitionend', ()=>{
+    console.log('END')
+})
+
+
+
+//* animationend
+
+const cajaAnimacion = document.querySelector('.animacion')
+console.log(cajaAnimacion);
+cajaAnimacion.addEventListener('animationend', ()=> {
+    btnTransition.style.backgroundColor = 'black';
+})
+
+
+const deleteBoxBtn = document.querySelector('.delete-box')
+deleteBoxBtn.addEventListener('click', () => {
+    console.log('funciona')
+    cajaAnimacion.classList.add('out')
+    cajaAnimacion.addEventListener('animationend', () => cajaAnimacion.remove())
+})
+
+
+//*=============================================
+//*=============================================
+
+//? Otras maneras de escuchar un evento
+
+//* Usando las propiendades on...
+
+const foto2 = document.querySelector('.foto-2')
+console.log(foto2);
+foto2.addEventListener('click', console.log('test'))
+
+foto2.onmouseenter = () => console.log('has entradodkne ')
+
+//!differncias

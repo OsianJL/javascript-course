@@ -33,6 +33,32 @@ input {
 
 p.scroll {
     width: 25%;
+    height: 150px;
+    overflow-y: scroll;
     border: 2px solid black;
     padding: .5rem;
+}
+
+button.transicion:hover {
+    background-color: crimson;
+    transition: background-color 1s ease;
+
+}
+
+div.animacion {
+    background-color: indigo;
+    width: 100px;
+    height: 100px;
+    margin-top: 2rem;
+    /* animation: moveRight 2s forwards;  */
+}
+
+.out {
+    animation: moveRight 2s forwards;
+}
+
+@keyframes moveRight {
+to {
+    translate: 1000px
+}   
 }
