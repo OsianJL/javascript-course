@@ -181,8 +181,54 @@ deleteBoxBtn.addEventListener('click', () => {
 
 const foto2 = document.querySelector('.foto-2')
 console.log(foto2);
-foto2.addEventListener('click', console.log('test'))
+foto2.addEventListener('dblclick', () => console.log('test1')) // se ejecuta
+foto2.addEventListener('dblclick', () => console.log('test2')) // se ejecuta tb
 
-foto2.onmouseenter = () => console.log('has entradodkne ')
+
+
+foto2.onmouseenter = () => console.log('has entradodkne una vez ') // esta no se ejecuta
+foto2.onclick = () => console.log('has entradodkne otra vez ') 
 
 //!differncias
+
+//! Usando addEventListner PUEDES AÑADIR VARIAS VECES EL MISMO EVENTO AL MISMO ELEMENTO
+
+//! hay un tercer parametro que no puedes usar con los on...
+
+//* usando los atributos html on...
+
+function handleFotoClick() {
+    console.log("funciono");
+    document.body.style.backgroundColor = "lightpink";
+}
+
+
+//*======================================
+//*======================================
+//*COMO LIMPIAR LOS LISTENERS
+//! se utiliza el $ para indicar variables que contienen elementos del DOM
+const $foto3 = document.querySelector('.foto-3')
+const $foto4 = document.querySelector('.foto-4')
+
+const $removeEventBtn = document.querySelector('.remove-event')
+
+console.log($foto3, $removeEventBtn);
+
+$foto3.onmousemove = (event) => console.log('Primera imagen',event.offsetX, event.offsetY);
+
+function handleImageMove (event) {
+
+    console.log('Segunda imagen',event.offsetX, event.offsetY);
+}
+
+
+$foto4.addEventListener('mousemove',handleImageMove);
+
+//! MUY IMPORTANTEEEEEEEEE
+//! QUITAR EVENTOS
+
+$removeEventBtn.onclick = () => {
+    $foto3.onmousemove = null; 
+
+    $foto4.removeEventListener('mousemove', handleImageMove)
+}
