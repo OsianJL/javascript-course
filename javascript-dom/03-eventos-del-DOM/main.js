@@ -61,3 +61,54 @@ img.addEventListener('click', function () {handleImageClickWithParam('osian')} )
 img.addEventListener('click', () => {handleImageClickWithParam('osian')} )
 
 img.addEventListener('click', () => handleImageClickWithParam('osian') )
+
+
+
+//*==============================================
+//*==============================================
+//*Ejemplos de Eventos
+
+const btn1 = document.querySelector('.btn-1')
+console.log(btn1);
+
+const btn2 = document.querySelector('.btn-2')
+const btn3 = document.querySelector('.btn-3')
+const btn4 = document.querySelector('.btn-4')
+const btn5 = document.querySelector('.btn-5')
+
+
+//* Click
+
+btn1.addEventListener('click', () => {
+   console.log('CLICK')
+})
+
+//* dblClick
+
+btn2.addEventListener('dblclick', () => {
+   console.log('DOUBLE CLICK')
+})
+
+//* mouseover
+
+// btn3.addEventListener('mouseover', () => {
+//    console.log('HAS ENTRADO EN EL BTN')
+// })
+
+//* mouseenter // tiene algunas diferencias, ya que no activa a sus hijos, como mouseover
+
+btn3.addEventListener('mouseenter', () => {
+   console.log('HAS ENTRADO EN EL BTN')
+})
+
+//* mouseleave
+
+btn4.addEventListener('mouseleave', () => {
+   console.log('HAS SALIDO DEL BTN')
+})
+
+//* mousemove
+
+btn5.addEventListener('mousemove', () => {
+   console.log('te estas moviendo por el boton')
+})

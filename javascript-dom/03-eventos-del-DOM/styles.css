@@ -10,3 +10,29 @@
 .borderOnClick {
     border: 2px solid blue; 
 }
+
+button {
+    background-color: royalblue;
+    padding: 1rem 2rem; 
+    color: white; 
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
+
+button:active {
+    background-color: gold;
+}
+
+
+input {
+    padding: 1rem 2rem;
+    font-size: 1.5rem; 
+
+}
+
+p.scroll {
+    width: 25%;
+    border: 2px solid black;
+    padding: .5rem;
+}
