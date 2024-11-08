@@ -47,6 +47,8 @@ color: white
 
 body.append(buttonJS)
 
+buttonJS.classList.add('rounded')
+
 
 buttonJS.setAttribute("data-id", "12345")
 title.setAttribute("title", "soy un titulo")
