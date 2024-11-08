@@ -32,14 +32,12 @@ function borrarTarea(tareas) {
   for (let i = 0; i < tareas.length; i++) {
     if (tareas[i].id === idTareaParaBorrar) {
       index = i;
-    }
-
-    if (index !== -1) {
       tareas.splice(index, 1);
       console.log(`la tarea se ha borrado correctamente`);
-    } else {
-      console.log("No hay ninguna tarea con ese ID");
     }
+  }
+  if (index === -1) {
+    console.log("No hay ninguna tarea con ese ID");
   }
 }
 
@@ -53,15 +51,18 @@ function actualizarTarea(tareas) {
     console.log("ID no válido, intenta otro");
     return;
   }
+  let tareaCorrecta = -1;
   for (let i = 0; i < tareas.length; i++) {
     if (tareas[i].id === tareaParaActualizarID) {
       tareas[i].tarea = tareaNuevaEnunciado;
+      tareaCorrecta = tareas[i].id;
       console.log(
         `la tarea numero ${tareaParaActualizarID} se ha actualizado correctamente`
       );
-    } else {
-      console.log("ese id no corresponde a ninguna tarea");
     }
+  }
+  if (tareaCorrecta === -1) {
+    console.log("ese id no corresponde a ninguna tarea");
   }
 }
 
@@ -74,12 +75,11 @@ function completarDescompletarTarea(tareas) {
     console.log("ID no válido, intenta otro");
     return;
   }
-  if (tareaCompletarDescompletarID > tareas.length -1){
-    console.log("ese id no corresponde a ninguna tarea")
-  }  
-  
+
+  let index = -1;
   for (let i = 0; i < tareas.length; i++) {
     if (tareas[i].id === tareaCompletarDescompletarID) {
+      index = i;
       if (tareas[i].isCompleted === true) {
         tareas[i].isCompleted = false;
       } else {
@@ -88,10 +88,12 @@ function completarDescompletarTarea(tareas) {
       console.log(
         `la tarea numero ${tareaCompletarDescompletarID} ha cambiado su estado`
       );
-    } 
     }
   }
-
+  if (index === -1) {
+    console.log("ese id no corresponde a ninguna tarea");
+  }
+}
 
 export {
   leerTareas,
